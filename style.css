@@ -1,0 +1,182 @@
+body,html{
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.library_heading{
+    width: 3cm;
+    text-align: center;
+    height: 1cm;
+    margin: 0.5cm 0;
+    overflow: hidden;
+}
+
+
+.book_detail_container{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+}
+.book_detail{
+    width: 6cm;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 4px double;
+    border-radius: 0.5cm;
+    position: fixed;
+    background: white;
+}
+.book_detail_heading{
+    margin: 0;
+    width: 100%;
+    height: 1cm;
+    padding-top: 0.5cm;
+    font-size: 0.5cm;
+    text-align: center;
+}
+.book_detail_input{
+    width: 80%;
+    height: 0.8cm;
+    margin-bottom: 0.5cm;
+    border-radius: 0.2cm;
+    border: 2px solid #666;
+    position: relative;
+    padding-left: 0.2cm;
+}
+.book_detail_input:focus{
+    outline: none;
+}
+
+
+
+@media (max-width: 18cm){
+    .button{
+        border-radius: 0.2cm;
+        height: calc(0.8cm + 4px);
+        width: calc(3cm + 4px);
+        margin: calc(0.3cm - 2px) calc(0.2cm - 2px) calc(0.8cm - 2px) calc(0.2cm - 2px);
+        border-bottom: 4px solid #222;
+        border-right: 4px solid #222;
+        border-top: none;
+        border-left: none;
+        cursor: pointer;
+    }
+    .remove{
+        margin: calc(0.2cm - 2px);
+    }
+}
+@media (min-width: 18cm){
+    .button{
+        height: 0.8cm;
+        width: 3cm;
+        margin: 0.3cm 0.2cm 0.8cm 0.2cm;
+        border-radius: 0.2cm;
+        border: none;
+    }
+    .button:hover{
+        height: calc(0.8cm + 4px);
+        width: calc(3cm + 4px);
+        margin: calc(0.3cm - 2px) calc(0.2cm - 2px) calc(0.8cm - 2px) calc(0.2cm - 2px);
+        border-bottom: 4px solid #222;
+        border-right: 4px solid #222;
+        border-top: none;
+        border-left: none;
+        cursor: pointer;
+    }
+    .remove{
+        margin: 0.2cm;
+    }
+    .remove:hover{
+        margin: calc(0.2cm - 2px);
+    }
+}
+
+.button:active{    
+    height: calc(0.8cm + 4px);
+    width: calc(3cm + 4px);
+    margin: calc(0.3cm - 2px) calc(0.2cm - 2px) calc(0.8cm - 2px) calc(0.2cm - 2px);
+    border-top: 4px solid #222;
+    border-left: 4px solid #222;
+    border-bottom: none;
+    border-right: none;
+}
+.remove:active{
+    margin: calc(0.2cm - 2px);
+}
+.action{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+}
+
+
+.err{
+    color: red;
+    font-size: small;
+    margin-top: -0.35cm;
+    margin-bottom: 0.35cm;
+    padding: 0;
+    width: 70%;
+    text-align: center;
+}
+.add, .new_book{
+    background: #57b400;
+    color: white;
+}
+.cancel{
+    background: #c90902;
+    color: white;
+}
+
+.books{
+    height: calc(100vh - 4.6cm - 10px);
+    margin-bottom: 0.2cm;
+    padding: 0.25cm;
+    width: 100vw;
+    width: calc(100vw - 1.5cm - 10px);
+    border-radius: 0.3cm;
+    border: 5px double black;
+    display: grid;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.books::-webkit-scrollbar {
+  display: none;
+}
+.single_book{
+    margin: 0.25cm;
+    background: #bbb;
+    height: fit-content;
+    padding: 0.5cm;
+    border: 1px solid black;
+    border-radius: 0.3cm;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 3.5cm;
+}
+.book_display{
+    margin: 0.1cm;
+}
+.remove{
+    min-width: 2cm;
+    color: white;
+    background: #c90902;
+}
+.new_book{
+    position: relative;
+}
